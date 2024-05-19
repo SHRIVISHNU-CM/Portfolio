@@ -10,56 +10,119 @@ import { SiMongodb } from "react-icons/si";
 import { SiMysql } from "react-icons/si";
 import { FaPython } from "react-icons/fa";
 import { SiPostman } from "react-icons/si";
+import { motion } from "framer-motion";
 function Skills() {
+    const icon = (dur) => ({
+        inital: { y: -10 },
+        animate: {
+            y: [5, -4],
+            x: [5, -5],
+            transition: {
+                duration: dur,
+                ease: "linear",
+                repeat: Infinity,
+                repeatType: "reverse"
+            }
+
+        }
+    })
     return (
         <>
-            <div>
-                <h1 className="text-center text-[30px] font-semibold">Skills</h1>
-            </div>
-            <skills className="flex justify-center gap-x-6 flex-wrap">
-                
-                    <div className="border w-min p-3 rounded-lg">
-                        <FaHtml5 className="text-orange-400 text-[50px]" />
-                    </div>
-                    <div className="border w-min p-3 rounded-lg">
-                        <IoLogoCss3 className="text-blue-400 text-[50px]" />
-                    </div>
-                    <div className="border w-min p-3 rounded-lg">
-                        <IoLogoJavascript className="text-orange-400 text-[50px]" />
-                    </div>
-                    <div className="border w-min p-3 rounded-lg">
-                        <RiTailwindCssFill className="text-blue-400 text-[50px]" />
-                    </div>
-                    <div className="border w-min p-3 rounded-lg">
-                        <SiDaisyui className="text-neutral-600 text-[50px]" />
-                    </div>
-                    <div className="border w-min p-3 rounded-lg">
-                        <DiNodejs className="text-green-600 text-[50px]" />
-                    </div>
-                    
-                
-                
-                <div className="border w-min p-3 rounded-lg">
-                        <RiReactjsLine className=" text-[50px] text-blue-400" />
-                    </div>
-                    <div className="border w-min p-3 rounded-lg">
-                        <SiExpress className="text-neutral-600 text-[50px]" />
-                    </div>
-                    <div className="border w-min p-3 rounded-lg">
-                        <SiMongodb className=" text-[50px] text-green-500" />
-                    </div>
-                    <div className="border w-min p-3 rounded-lg">
-                        <SiMysql className=" text-[50px] text-blue-800" />
-                    </div>
-                    <div className="border w-min p-3 rounded-lg">
-                        <FaPython className=" text-[50px] text-yellow-400" />
-                    </div>
-                    <div className="border w-min p-3 rounded-lg">
-                        <SiPostman className=" text-[50px] text-orange-400" />
-                    </div>
-                
-            </skills>
+            <div className="h-[60vh] flex items-center flex-col gap-y-6">
+                <h1 className="text-center text-[30px] font-semibold text-white">Skills</h1>
 
+                <section className="flex justify-center gap-6 flex-wrap ">
+
+                    <motion.div
+                        variants={icon(2.9)}
+                        initial="inital"
+                        animate="animate"
+                        className="border w-min p-3 rounded-lg ">
+                        <FaHtml5 className="text-orange-400 text-[50px] " />
+                    </motion.div>
+                    <motion.div
+                        variants={icon(1.5)}
+                        initial="initial"
+                        animate="animate"
+                        className="border w-min p-3 rounded-lg">
+                        <IoLogoCss3 className="text-blue-400 text-[50px]" />
+                    </motion.div>
+                    <motion.div
+                        variants={icon(2.9)}
+                        initial="initial"
+                        animate="animate"
+                        className="border w-min p-3 rounded-lg">
+                        <IoLogoJavascript className="text-orange-400 text-[50px]" />
+                    </motion.div>
+                    <motion.div
+                        variants={icon(1.5)}
+                        initial="initial"
+                        animate="animate"
+                        className="border w-min p-3 rounded-lg">
+                        <RiTailwindCssFill className="text-blue-400 text-[50px]" />
+                    </motion.div>
+                    <motion.div
+                        variants={icon(2.9)}
+                        initial="initial"
+                        animate="animate"
+                        className="border w-min p-3 rounded-lg">
+                        <SiDaisyui className="text-neutral-600 text-[50px]" />
+                    </motion.div>
+                    <motion.div
+                        variants={icon(1.5)}
+                        initial="initial"
+                        animate="animate"
+                        className="border w-min p-3 rounded-lg">
+                        <DiNodejs className="text-green-600 text-[50px]" />
+                    </motion.div>
+
+
+
+                    <motion.div
+                        variants={icon(2.9)}
+                        initial="initial"
+                        animate="animate"
+                        className="border w-min p-3 rounded-lg">
+                        <RiReactjsLine className=" text-[50px] text-blue-400" />
+                    </motion.div>
+                    <motion.div
+                        variants={icon(1.5)}
+                        initial="initial"
+                        animate="animate"
+                        className="border w-min p-3 rounded-lg">
+                        <SiExpress className="text-neutral-600 text-[50px]" />
+                    </motion.div>
+                    <motion.div
+                        variants={icon(2.9)}
+                        initial="initial"
+                        animate="animate"
+                        className="border w-min p-3 rounded-lg">
+                        <SiMongodb className=" text-[50px] text-green-500" />
+                    </motion.div>
+                    <motion.div
+                        variants={icon(1.5)}
+                        initial="initial"
+                        animate="animate"
+                        className="border w-min p-3 rounded-lg">
+                        <SiMysql className=" text-[50px] text-blue-800" />
+                    </motion.div>
+                    <motion.div
+                        variants={icon(2.9)}
+                        initial="initial"
+                        animate="animate"
+                        className="border w-min p-3 rounded-lg">
+                        <FaPython className=" text-[50px] text-yellow-400" />
+                    </motion.div>
+                    <motion.div
+                        variants={icon(1.5)}
+                        initial="initial"
+                        animate="animate"
+                        className="border w-min p-3 rounded-lg">
+                        <SiPostman className=" text-[50px] text-orange-400" />
+                    </motion.div>
+
+                </section>
+            </div>
 
 
         </>
