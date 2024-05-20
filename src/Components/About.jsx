@@ -11,14 +11,14 @@ function About() {
                         initial={{ x: -100, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.6 }}
-                        className="text-[25px] font-semibold text-white">About Me</motion.h1>
+                        className="text-[25px] font-semibold text-white my-4">About Me</motion.h1>
                 </div>
                 <div >
                     <motion.h1
                         initial={{ x: 100, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.6 }}
-                        className="text-white text-xl w-96 h-min">
+                        className="text-white text-xl w-[300px] lg:w-96 h-min">
                         I am a skilled programmer with HTML, CSS, Tailwind CSS, DaisyUI, Javascript, SQL, MongoDB, Node.js, Express.js,
                         React.js, and Python looking for a fresher role. I possess strong leadership qualities and thrive in collaborative team
                         environments. With a passion for technology and attention to detail, I deliver high-quality results. I am committed to
