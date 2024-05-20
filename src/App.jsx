@@ -11,19 +11,20 @@ function App() {
   const { scrollYProgress } = useScroll();
   return (
     <>
-        <div style={{ backgroundColor: "#002147" }}>
-        <motion.div className="fixed top-0 left-0  h-2  rounded-xl bg-red-500 origin-left" style={{scaleX:scrollYProgress}}/>
+      <div style={{ backgroundColor: "#002147" ,width:"100vw",overflow:"hidden"}} className="w-[100%]">
+        <motion.div className="fixed top-0 left-0  h-2  rounded-xl bg-red-500 origin-left" style={{ scaleX: scrollYProgress }} />
 
-          <Navbar />
-          <Head />
-          <About />
-          <Skills />
-          <Projects />
-          <Education />
-          <Footer />
 
-        </div>
-    
+        <Navbar />
+        <Head />
+        <About />
+        <Skills />
+        <Projects />
+        <Education />
+        <Footer />
+
+      </div>
+
 
     </>
   )
