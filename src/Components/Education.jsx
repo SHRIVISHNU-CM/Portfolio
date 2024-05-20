@@ -13,10 +13,10 @@ function Education() {
                 </motion.h1>
                 <div>
                     <motion.div
-                    initial={{x:-100,opacity:0}}
+                    initial={{x:-5,opacity:0}}
                     whileInView={{opacity:1,x:0}}
                     transition={{duration:2}}
-                     className="w-96 flex justify-evenly my-2">
+                     className="flex justify-evenly my-2 w-[350px]">
                         <h1 className="text-white text-xl">
                             JSS Science and Technology University, <br />
                             Mysuru
@@ -25,10 +25,10 @@ function Education() {
 
                     </motion.div>
                     <motion.div
-                    initial={{x:-100,opacity:0}}
+                    initial={{x:-5,opacity:0}}
                     whileInView={{opacity:1,x:0}}
                     transition={{duration:3}}
-                     className="w-96 my-2 flex justify-between">
+                     className="w-[350px] my-2 flex justify-between">
                         <h1 className="text-white text-xl">
                             Full-Stack Web Development Sigma 2.0 <br />
                             PW Skills <a href="https://pwskills.com/learn/certificate/27438d39-6c3e-4410-9079-b85bb1ea34a2/" className="badge badge-success text-white">Certificate</a>
