@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 function Footer() {
     return (
         <>
-            <div className="my-t-5 h-[50vh] flex items-center flex-col justify-center gap-6">
+            <div className="my-t-5 max-w-full h-[50vh] flex items-center flex-col justify-center ">
                 <motion.h1
                     whileInView={{ opacity: 1, y: 0 }}
                     initial={{ opacity: 0, y: -50 }}

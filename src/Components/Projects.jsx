@@ -14,7 +14,7 @@ function Projects() {
             whileInView={{opacity:1,y:0}}
             className="text-white text-[30px] text-center m-4">Personal Projects</motion.h1>
             
-            <div className="flex flex-col w-full lg:flex-row lg:flex-wrap justify-around items-center gap-2 my-5 lg:w-full md:w-full h-min">
+            <div className="flex flex-col max-w-full lg:flex-row lg:flex-wrap justify-around items-center gap-2 my-5 lg:w-full md:w-full h-min">
                 <motion.div
                 initial={{opacity:0,y:-5}}
                 transition={{duration:1}}

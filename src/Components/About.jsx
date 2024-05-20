@@ -5,7 +5,7 @@ function About() {
         <>
             <motion.div
                 
-                className="flex flex-col justify-around items-center lg:flex lg:flex-row my-5">
+                className="flex max-w-full flex-col justify-around items-center lg:flex lg:flex-row my-5">
                 <div >
                     <motion.h1
                         initial={{ x: -100, opacity: 0 }}
