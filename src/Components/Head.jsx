@@ -44,7 +44,7 @@ function Head() {
                 </div>
 
                 <motion.img
-                    initial={{ x: 200, opacity: 0 }}
+                    initial={{ x: -5, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.9, delay: 1.3 }}
 

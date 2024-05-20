@@ -13,8 +13,8 @@ function Education() {
                 </motion.h1>
                 <div>
                     <motion.div
-                    initial={{x:-5,opacity:0}}
-                    whileInView={{opacity:1,x:0}}
+                    initial={{y:-5,opacity:0}}
+                    whileInView={{opacity:1,y:0}}
                     transition={{duration:2}}
                      className="flex justify-evenly my-2 w-[350px]">
                         <h1 className="text-white text-xl">
@@ -25,8 +25,8 @@ function Education() {
 
                     </motion.div>
                     <motion.div
-                    initial={{x:-5,opacity:0}}
-                    whileInView={{opacity:1,x:0}}
+                    initial={{y:-5,opacity:0}}
+                    whileInView={{opacity:1,y:0}}
                     transition={{duration:3}}
                      className="w-[350px] my-2 flex justify-between">
                         <h1 className="text-white text-xl">
