@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 function Education() {
     return (
         <>
-            <main className="h-[60vh] flex justify-center flex-col items-center gap-y-6 lg:flex lg:justify-around my-5">
+            <main className="h-[80vh] w-full flex justify-center flex-col items-center gap-y-6 lg:flex lg:justify-around my-5">
                 <motion.h1
                     whileInView={{opacity:1,y:0}}
                     initial={{opacity:0,y:-100}}

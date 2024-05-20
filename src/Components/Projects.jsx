@@ -10,16 +10,17 @@ function Projects() {
         <>
             <motion.h1 
             initial={{opacity:0, y:-30}}
-            transition={{duration:2}}
+            transition={{duration:0.2}}
             whileInView={{opacity:1,y:0}}
-            className="text-white text-[30px] text-center">Personal Projects</motion.h1>
-            <section className="flex flex-wrap justify-around items-center gap-4 my-5 ">
+            className="text-white text-[30px] text-center my-8">Personal Projects</motion.h1>
+            
+            <div className="flex flex-col w-full lg:flex-row lg:flex-wrap justify-around items-center gap-2 my-5 lg:w-full md:w-full ">
                 <motion.div
-                initial={{opacity:0,x:-5}}
+                initial={{opacity:0,y:-5}}
                 transition={{duration:1}}
-                whileInView={{opacity:1,x:0}}
+                whileInView={{opacity:1,y:0}}
 
-                 className="card w-96 h-[500px] border">
+                 className="card w-[300px] lg:w-96 h-[500px] border">
                     <div className="card-body">
                         <h1 className="card-title text-orange-700">Medicos</h1>
                         <p className="text-white">
@@ -38,9 +39,9 @@ function Projects() {
 
                 <motion.div 
                 initial={{opacity:0,y:-100}}
-                transition={{duration:1}}
+                transition={{duration:0.2}}
                 whileInView={{opacity:1,y:0}}
-                className="card w-[350px] h-[500px] border">
+                className="card w-[300px] lg:w-96 h-[500px] border">
                     <div className="card-body">
                         <h1 className="card-title text-orange-600">Blog</h1>
                         <p className="text-white">
@@ -58,10 +59,10 @@ function Projects() {
                 </motion.div>
 
                 <motion.div
-                initial={{opacity:0,x:-5}}
-                transition={{duration:1}}
-                whileInView={{opacity:1,x:0}}
-                 className="card w-[350px] h-[500px] border">
+                initial={{opacity:0,y:-5}}
+                transition={{duration:0.2}}
+                whileInView={{opacity:1,y:0}}
+                 className="card w-[300px] lg:w-96 h-[500px] border">
                     <div className="card-body">
                         <h1 className="card-title text-orange-600">Employee Dashboard</h1>
                         <p className="text-white">
@@ -78,9 +79,9 @@ function Projects() {
 
                 <motion.div
                 initial={{opacity:0,y:-100}}
-                transition={{duration:1}}
+                transition={{duration:0.2}}
                 whileInView={{opacity:1,y:0}}
-                 className="card w-[350px] h-[500px] border">
+                 className="card w-[300px] lg:w-96  h-[500px] border">
                     <div className="card-body">
                         <h1 className="card-title text-orange-600">Netfilx Landing Page</h1>
                         <p className="text-white">
@@ -95,8 +96,7 @@ function Projects() {
                     </div>
 
                 </motion.div>
-            </section>
-            <div className="border-b-4 border-b-lime-700"></div>
+            </div>
 
         </>
     )
