@@ -15,8 +15,8 @@ function Skills() {
     const icon = (dur) => ({
         inital: { y: -10 },
         animate: {
-            y: [5, -4],
-            x: [5, -5],
+            y: [2, -2],
+            x: [2, -1],
             transition: {
                 duration: dur,
                 ease: "linear",
