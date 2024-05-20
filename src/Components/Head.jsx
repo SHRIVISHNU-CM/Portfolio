@@ -3,27 +3,27 @@ import Pic from "../public/Vishnu.jpeg"
 function Head() {
     return (
         <>
-            <div className="flex justify-evenly items-center lg:flex-center flex-col lg:flex-row my-5 text-white h-[100vh]">
-                <div className="card w-[350px]">
+            <div className="flex justify-center items-center lg:flex-center flex-col lg:flex-row my-5 text-white h-[100vh]">
+                <div className="card w-96">
                     <div className="card-body">
                         <motion.h2
-                            initial={{ x: -30, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
+                            initial={{ y: -30, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
                             transition={{ duration: 0.9, delay: 0.7, }}
                         >
                             Hi there ,I'm
 
                         </motion.h2>
                         <motion.h1
-                            initial={{ x: -30, opacity: 0 }}
-                            whileInView={{ x: 0, opacity: 1 }}
+                            initial={{ y: -30, opacity: 0 }}
+                            whileInView={{ y: 0, opacity: 1 }}
                             transition={{ duration: 0.9, delay: 0.2, }}
                             className="card-title ">
                             <span className="border-b-4 border-b-lime-500 text-[25px]">Shri Vishnu C M</span>
                         </motion.h1>
                         <motion.p
-                            initial={{ x: -20, opacity: 0 }}
-                            whileInView={{ x: 0, opacity: 1 }}
+                            initial={{ y: -20, opacity: 0 }}
+                            whileInView={{ y: 0, opacity: 1 }}
                             transition={{ duration: 0.9, delay: 0.4, }}
                         >A
 
@@ -48,7 +48,7 @@ function Head() {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.9, delay: 1.3 }}
 
-                    src={Pic} className="w-[300px] h-[300px] rounded-full shadow-" />
+                    src={Pic} className="w-[200px] h-[200px] rounded-full shadow-" />
 
             </div>
         </>

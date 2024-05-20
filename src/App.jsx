@@ -14,11 +14,11 @@ function App() {
         <div style={{ backgroundColor: "#002147" }}>
         <motion.div className="fixed top-0 left-0 right-0 h-2  rounded-xl bg-red-500 origin-left" style={{scaleX:scrollYProgress}}/>
 
-          <Navbar />
+          {/* <Navbar /> */}
           <Head />
           <About />
           <Skills />
-          {/* <Projects /> */}
+          <Projects />
           <Education />
           <Footer />
 

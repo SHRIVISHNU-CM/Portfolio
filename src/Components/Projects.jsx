@@ -12,7 +12,7 @@ function Projects() {
             initial={{opacity:0, y:-30}}
             transition={{duration:0.2}}
             whileInView={{opacity:1,y:0}}
-            className="text-white text-[30px] text-center my-8">Personal Projects</motion.h1>
+            className="text-white text-[30px] text-center m-4">Personal Projects</motion.h1>
             
             <div className="flex flex-col w-full lg:flex-row lg:flex-wrap justify-around items-center gap-2 my-5 lg:w-full md:w-full ">
                 <motion.div
