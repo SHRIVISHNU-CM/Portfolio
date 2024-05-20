@@ -15,11 +15,11 @@ function Projects() {
             className="text-white text-[30px] text-center">Personal Projects</motion.h1>
             <section className="flex flex-wrap justify-around items-center gap-4 my-5 ">
                 <motion.div
-                initial={{opacity:0,x:-10}}
+                initial={{opacity:0,x:-5}}
                 transition={{duration:1}}
                 whileInView={{opacity:1,x:0}}
 
-                 className="card w-96 h-[400px] border">
+                 className="card w-96 h-[500px] border">
                     <div className="card-body">
                         <h1 className="card-title text-orange-700">Medicos</h1>
                         <p className="text-white">
@@ -40,7 +40,7 @@ function Projects() {
                 initial={{opacity:0,y:-100}}
                 transition={{duration:1}}
                 whileInView={{opacity:1,y:0}}
-                className="card w-96 h-[400px] border">
+                className="card w-96 h-[500px] border">
                     <div className="card-body">
                         <h1 className="card-title text-orange-600">Blog</h1>
                         <p className="text-white">
@@ -58,10 +58,10 @@ function Projects() {
                 </motion.div>
 
                 <motion.div
-                initial={{opacity:0,x:-10}}
+                initial={{opacity:0,x:-5}}
                 transition={{duration:1}}
                 whileInView={{opacity:1,x:0}}
-                 className="card w-96 h-[400px] border">
+                 className="card w-96 h-[500px] border">
                     <div className="card-body">
                         <h1 className="card-title text-orange-600">Employee Dashboard</h1>
                         <p className="text-white">
@@ -80,7 +80,7 @@ function Projects() {
                 initial={{opacity:0,y:-100}}
                 transition={{duration:1}}
                 whileInView={{opacity:1,y:0}}
-                 className="card w-96 h-[400px] border">
+                 className="card w-96 h-[500px] border">
                     <div className="card-body">
                         <h1 className="card-title text-orange-600">Netfilx Landing Page</h1>
                         <p className="text-white">
