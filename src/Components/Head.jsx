@@ -3,7 +3,7 @@ import Pic from "../public/Vishnu.jpeg"
 function Head() {
     return (
         <>
-            <div className="flex justify-evenly items-center my-5 text-white h-[100vh]">
+            <div className="flex justify-evenly items-center lg:flex-center flex-col my-5 text-white h-[100vh]">
                 <div className="card w-[350px]">
                     <div className="card-body">
                         <motion.h2
