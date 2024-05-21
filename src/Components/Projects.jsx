@@ -1,4 +1,6 @@
 import { DiNodejs } from "react-icons/di";
+import { FaHtml5 } from "react-icons/fa";
+import { IoLogoCss3 } from "react-icons/io";
 import { RiReactjsLine } from "react-icons/ri";
 import { SiExpress } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
@@ -87,11 +89,9 @@ function Projects() {
                         <p className="text-white">
                             Netflix Landing Page is built using HTML and CSS and is completely responsive on big and mobile devices.                </p>
                         <div className="flex justify-center gap-x-2">
-                            <RiReactjsLine className=" text-[50px] text-blue-400" />
-                            <RiTailwindCssFill className=" text-[50px] text-blue-400" />
-                            <DiNodejs className=" text-[50px] text-green-400" />
-                            <SiExpress className=" text-[50px] text-neutal-400" />
-                            <SiMongodb className=" text-[50px] text-green-400" />
+                            <FaHtml5 className=" text-[50px] text-blue-400" />
+                            <IoLogoCss3 className=" text-[50px] text-blue-400" />
+                       
                         </div>
                     </div>
 
