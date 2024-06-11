@@ -11,6 +11,8 @@ import { SiMysql } from "react-icons/si";
 import { FaPython } from "react-icons/fa";
 import { SiPostman } from "react-icons/si";
 import { motion } from "framer-motion";
+import { SiAutocad } from "react-icons/si";
+import { SiFramer } from "react-icons/si";
 function Skills() {
     const icon = (dur) => ({
         inital: { y: -10 },
@@ -119,6 +121,20 @@ function Skills() {
                         animate="animate"
                         className="border w-min p-3 rounded-lg">
                         <SiPostman className=" text-[50px] text-orange-400" />
+                    </motion.div>
+                    <motion.div
+                        variants={icon(1.5)}
+                        initial="initial"
+                        animate="animate"
+                        className="border w-min p-3 rounded-lg">
+                        <SiAutocad className=" text-[50px] text-red-400" />
+                    </motion.div>
+                    <motion.div
+                        variants={icon(1.5)}
+                        initial="initial"
+                        animate="animate"
+                        className="border w-min p-3 rounded-lg">
+                        <SiFramer className=" text-[50px] text-slate-600" />
                     </motion.div>
 
                 </section>
