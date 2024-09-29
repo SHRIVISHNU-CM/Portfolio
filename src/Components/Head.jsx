@@ -3,9 +3,9 @@ import Pic from "../public/Vishnu.jpeg"
 function Head() {
     return (
         <>
-            <div className="flex justify-center w-full items-center lg:flex-center flex-col lg:flex-row  text-white h-[100vh]">
+            <div className="flex justify-center  items-center lg:justify-around flex-col lg:flex-row  text-white h-[100vh]">
                 <div className="card w-96">
-                    <div className="card-body">
+                    <div className="card-body text-xl lg:text-2xl">
                         <motion.h2
                             initial={{ y: -30, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
@@ -48,7 +48,7 @@ function Head() {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.9, delay: 1.3 }}
 
-                    src={Pic} className="w-[200px] h-[200px] rounded-full shadow-" />
+                    src={Pic} className="w-[200px] h-[200px] rounded-lg lg:w-[400px] lg:h-[400px] lg:rounded-2xl shadow-" />
 
             </div>
         </>
