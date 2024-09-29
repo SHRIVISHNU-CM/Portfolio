@@ -33,7 +33,7 @@ function Skills() {
             <div className="h-[60vh] max-w-full flex items-center flex-col gap-y-6">
                 <h1 className="text-center text-[30px] font-semibold text-white">Skills</h1>
 
-                <section className="flex justify-center gap-3 flex-wrap ">
+                <section className="flex justify-center gap-3 flex-wrap text-xl lg:text-2xl">
 
                     <motion.div
                         variants={icon(2.9)}

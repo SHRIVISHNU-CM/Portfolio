@@ -19,7 +19,7 @@ function Education() {
             transition={{ duration: 2 }}
             className="flex flex-col justify-center my-2 max-w-full lg:w-96"
           >
-            <h1 className="text-white text-center">
+            <h1 className="text-white text-center text-xl lg:text-2xl">
               JSS Science and Technology University, <br /> Mysuru
             </h1>
           </motion.div>
@@ -29,7 +29,7 @@ function Education() {
             transition={{ duration: 2 }}
             className="flex flex-col justify-center my-2 max-w-full lg:w-96"
           >
-            <h1 className="text-white text-center">
+            <h1 className="text-white text-center text-xl lg:text-2xl">
               Full-Stack Web Development Sigma 2.0 <br /> PW Skills{" "}
               <a
                 href="https://pwskills.com/learn/certificate/27438d39-6c3e-4410-9079-b85bb1ea34a2/"
