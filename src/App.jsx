@@ -11,7 +11,7 @@ function App() {
   const { scrollYProgress } = useScroll();
   return (
     <>
-      <div style={{ backgroundColor: "#002147"}} className="w-full">
+      <div style={{ backgroundColor: "#002147"}} className="  overflow-x-hidden">
         <motion.div className="fixed top-0 left-0  h-2  rounded-xl bg-red-500 origin-left" style={{ scaleX: scrollYProgress }} />
 
 
