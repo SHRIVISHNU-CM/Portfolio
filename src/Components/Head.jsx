@@ -35,7 +35,7 @@ function Head() {
                                 initial={{ y: 100, opacity: 0 }}
                                 whileInView={{ y: 0, opacity: 1 }}
                                 transition={{ duration: 0.9, delay: 0.6 }}
-                                href="https://drive.google.com/file/d/1ZajV39uOHf0p3SQXaHdThGBKwZ_-DYMc/view?usp=sharing" className="btn btn-success text-white">Resume</motion.a>
+                                href="https://drive.google.com/file/d/1WPGxa15mXY-jXMKCg1do0tFkwOUlUmWP/view?usp=sharing" className="btn btn-success text-white">Resume</motion.a>
                         </div>
 
 
