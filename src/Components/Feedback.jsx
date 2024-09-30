@@ -12,6 +12,7 @@ function Feedback() {
       })
       .then(
         () => {
+            form.current.reset()
           console.log('SUCCESS!');
         },
         (error) => {
@@ -23,16 +24,16 @@ function Feedback() {
         <>
             <h1 className='text-2xl text-white text-center'>FeedBack</h1>
             <div className='flex justify-center '>
-                <form ref={form} onSubmit={HandleSubmit} className='w-[300px]'>
-                    <label className='input input-bordered flex items-center gap-3 bg-slate-200 my-3'>
+                <form ref={form} onSubmit={HandleSubmit} className='w-[400px] lg:w-[500px]'>
+                    <label className='input input-bordered flex items-center gap-3 bg-slate-200 my-3 text-xl lg:text-2xl'>
                         Name:
                         <input className='text-orange-400' type='text' placeholder='Enter your Name' name='user_name' />
                     </label>
-                    <label className='input input-bordered flex items-center gap-3 bg-slate-200 my-3'>
+                    <label className='input input-bordered flex items-center gap-3 bg-slate-200 my-3 text-xl lg:text-2xl'>
                         Email:
                         <input type='text' className='text-orange-400' placeholder='Enter Your Email' name='user_email'/>
                     </label>
-                    <textarea className='w-full input input-bordered bg-slate-200 text-orange-400' placeholder='Enter Feedback' name='message'/>
+                    <textarea className='w-full input input-bordered bg-slate-200 text-orange-400 text-xl lg:text-2xl' placeholder='Enter Feedback' name='message'/>
                     <button type='submit' value="Send" className='btn btn-success text-white'>Send</button>
                 </form>
             </div>
