@@ -4,21 +4,22 @@ import { useRef } from 'react';
 function Feedback() {
     const form = useRef()
 
-    const HandleSubmit = (e) =>{
+    const HandleSubmit = (e) => {
         e.preventDefault()
         emailjs
-      .sendForm('service_whyjkjk', 'template_92c2e9v', form.current, {
-        publicKey: 'y2gTWOppUDHIAC1Qo',
-      })
-      .then(
-        () => {
-            form.current.reset()
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
+            .sendForm('service_whyjkjk', 'template_92c2e9v', form.current, {
+                publicKey: 'y2gTWOppUDHIAC1Qo',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!')
+                    form.current.reset()
+
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
     }
     return (
         <>
@@ -31,9 +32,9 @@ function Feedback() {
                     </label>
                     <label className='input input-bordered flex items-center gap-3 bg-slate-200 my-3 text-xl lg:text-2xl'>
                         Email:
-                        <input type='text' className='text-orange-400' placeholder='Enter Your Email' name='user_email'/>
+                        <input type='text' className='text-orange-400' placeholder='Enter Your Email' name='user_email' />
                     </label>
-                    <textarea className='w-full input input-bordered bg-slate-200 text-orange-400 text-xl lg:text-2xl' placeholder='Enter Feedback' name='message'/>
+                    <textarea className='w-full input input-bordered bg-slate-200 text-orange-400 text-xl lg:text-2xl' placeholder='Enter Feedback' name='message' />
                     <button type='submit' value="Send" className='btn btn-success text-white'>Send</button>
                 </form>
             </div>
