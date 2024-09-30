@@ -25,7 +25,7 @@ function Feedback() {
         <>
             <h1 className='text-2xl text-white text-center'>FeedBack</h1>
             <div className='flex justify-center '>
-                <form ref={form} onSubmit={HandleSubmit} className='w-[350px] lg:w-[500px]'>
+                <form ref={form} onSubmit={HandleSubmit} className='w-[280px] lg:w-[500px]'>
                     <label className='input input-bordered flex items-center gap-3 bg-slate-200 my-3 text-xl lg:text-2xl'>
                         Name:
                         <input className='text-orange-400' type='text' placeholder='Enter your Name' name='user_name' />
