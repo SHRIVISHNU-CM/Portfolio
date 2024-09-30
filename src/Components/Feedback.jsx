@@ -1,11 +1,17 @@
 import emailjs from '@emailjs/browser';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 function Feedback() {
     const form = useRef()
+    const [err, errMsg] = useState('')
 
     const HandleSubmit = (e) => {
         e.preventDefault()
+        const email = form.current.user_email.value
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(!emailRegex.test(email)){
+            errMsg("Invalid Email")
+        }
         emailjs
             .sendForm('service_whyjkjk', 'template_92c2e9v', form.current, {
                 publicKey: 'y2gTWOppUDHIAC1Qo',
@@ -14,9 +20,10 @@ function Feedback() {
                 () => {
                     console.log('SUCCESS!')
                     form.current.reset()
-
+                    errMsg('')
                 },
                 (error) => {
+                    
                     console.log('FAILED...', error.text);
                 },
             );
@@ -36,6 +43,7 @@ function Feedback() {
                     </label>
                     <textarea className='w-full input input-bordered bg-slate-200 text-orange-400 text-xl lg:text-2xl' placeholder='Enter Feedback' name='message' />
                     <button type='submit' value="Send" className='btn btn-success text-white'>Send</button>
+                    {err && <p className='text-xl text-white'>{err}</p>}
                 </form>
             </div>
 
