@@ -1,5 +1,6 @@
 import About from "./Components/About"
 import Education from "./Components/Education"
+import Feedback from "./Components/Feedback"
 import Footer from "./Components/Footer"
 import Head from "./Components/Head"
 import Navbar from "./Components/Navbar"
@@ -21,6 +22,7 @@ function App() {
         <Skills />
         <Projects />
         <Education />
+        <Feedback/>
         <Footer />
 
       </div>
