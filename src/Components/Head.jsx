@@ -20,7 +20,7 @@ function Head() {
         <>
             <main className="w-full flex justify-center flex-col lg:flex-row lg:justify-center  items-center h-screen ">
                 <div className="text-left">
-                    <img src={Pic}  className="rounded-md lg:w-[300px] w-[200px]"/>
+                    <img src={Pic}  className="rounded-md lg:w-[300px] w-[200px]" alt="MyImage"/>
                 </div>
                 <div>
                     <h1 className="text-center text-[16px] lg:text-[20px]">Hi,Welcome Everyone</h1>
