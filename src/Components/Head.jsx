@@ -1,12 +1,12 @@
-import Pic from "../public/Vishnu.jpeg"
+import Pic from "../public/SHRIVISHNU.jpeg"
 import { TypewriterEffectSmooth } from "../acenComponents/typerwriter"
 import About from "./About";
 import { Highlight } from "../acenComponents/hero-light";
 import Skills from "./Skills";
-import { useEffect,useState } from "react";
-import axios from "axios"
 import GitCard from "./GitCard";
-import {VITE_TOKEN} from "../../config"
+import { VITE_RESUME } from "../../config"
+import { Link } from "react-router-dom";
+
 
 function Head() {
     const words = [
@@ -15,56 +15,12 @@ function Head() {
         },
 
     ]
-    const [contributions, setContributions] = useState([]);
-    const [error, setError] = useState(null);
 
-    useEffect(() => {
-        const fetchContributions = async () => {
-            const endpoint = "https://api.github.com/graphql";
-            const query = `
-                query($username: String!) {
-                    user(login: $username) {
-                        contributionsCollection {
-                            contributionCalendar {
-                                totalContributions
-                                weeks {
-                                    contributionDays {
-                                        date
-                                        contributionCount
-                                        color
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            `;
-            const token = VITE_TOKEN; 
-            try {
-                const response = await axios.post(
-                    endpoint,
-                    { query, variables: { username: "SHRIVISHNU-CM" } },
-                    {
-                        headers: {
-                            Authorization: `Bearer ${token}`,
-                        },
-                    }
-                );
-                const days =
-                    response.data.data.user.contributionsCollection.contributionCalendar.totalContributions
-                setContributions(days);
-            } catch (e) {
-                setError(e.message);
-            }
-        };
-
-        fetchContributions();
-    }, []);
     return (
         <>
             <main className="w-full flex justify-center flex-col lg:flex-row lg:justify-center  items-center h-screen ">
                 <div className="text-left">
-                    <img src={Pic} width={200} />
+                    <img src={Pic}  className="rounded-md lg:w-[300px] w-[200px]"/>
                 </div>
                 <div>
                     <h1 className="text-center text-[16px] lg:text-[20px]">Hi,Welcome Everyone</h1>
@@ -78,7 +34,18 @@ function Head() {
                                 breathtaking digital experiences
                             </Highlight>
                         </h2>
+                        <div className="mt-6 flex justify-center gap-3">
+                            <Link to={VITE_RESUME} className="border px-10 py-3 rounded-3xl  bg-emerald-500 hover:bg-emerald-300 text-white">
+                                Resume
+                            </Link>
+                            <Link to="/experience" className="border px-10 py-3 rounded-3xl  bg-emerald-500 hover:bg-emerald-300 text-white">
+                               My Experience
+                            </Link>
+                        </div>
+
+
                     </div>
+
 
                 </div>
 
@@ -87,7 +54,7 @@ function Head() {
             <section className="mt-10 py-10">
                 <h2 className="text-center text-[16px] lg:text-[20px] font-bold">GitHub Contributions</h2>
             </section>
-            <GitCard props={contributions}/>
+            <GitCard />
             <About />
             <Skills />
         </>
