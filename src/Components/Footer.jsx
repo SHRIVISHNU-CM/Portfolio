@@ -7,11 +7,11 @@ function Footer() {
         <>
             <div className=" border-t-2 py-4 mt-3">
                 <div className="flex justify-center gap-x-9 mb-3">
-                    <Link to="https://github.com/SHRIVISHNU-CM">
+                    <Link to="https://github.com/SHRIVISHNU-CM" aria-label="Git Profile">
                         <BsGithub className="text-[24px] lg:text-[20px] text-gray-900" />
 
                     </Link>
-                    <Link to="https://www.linkedin.com/in/shrivishnu-cm-070b78274/">
+                    <Link to="https://www.linkedin.com/in/shrivishnu-cm-070b78274/" aria-label="LinkedIn Profile">
                         <FaLinkedin className="text-[24px] lg:text-[20px] text-blue-800" />
 
                     </Link>

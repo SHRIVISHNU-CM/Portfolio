@@ -49,11 +49,11 @@ function Navbar() {
                         </div>
                     </div>
                     <div className=' gap-8 hidden lg:flex'>
-                        <Link to="https://github.com/SHRIVISHNU-CM">
+                        <Link to="https://github.com/SHRIVISHNU-CM" aria-label='Git Profile'>
                             <BsGithub className=" lg:text-[20px] text-gray-900" />
 
                         </Link>
-                        <Link to="https://www.linkedin.com/in/shrivishnu-cm-070b78274/">
+                        <Link to="https://www.linkedin.com/in/shrivishnu-cm-070b78274/" aria-label='LinkedIn Profile'>
                             <FaLinkedin className="lg:text-[20px] text-blue-800" />
 
                         </Link>

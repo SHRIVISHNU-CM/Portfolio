@@ -24,18 +24,19 @@ function GitCard({ props }) {
                             </h1>
                             {
                                 Data ? <>
+                                <img src={Data.avatar_url} style={{ width: "50px", borderRadius: "100%", zIndex: 50 }} alt='git image'/>
                                     <p className="font-normal text-[16px] lg:text-xl text-white mb-4 relative z-50">
                                         USERNAME : {Data.login}
                                     </p>
                                     <p className="font-normal text-[16px] lg:text-xl text-white mb-4 relative z-50">
                                         Bio : {Data.bio}
                                     </p>
-                                    <p className="font-normal text-[16px] lg:text-xle text-white mb-4 relative z-50">
+                                    <p className="font-normal text-[16px] lg:text-xl text-white mb-4 relative z-50">
                                         Respositories : {Data.public_repos}
                                     </p>
                                 </>
                                     :
-                                    <p className="font-normal text-[16px] lg:text-xle text-white mb-4 relative z-50">
+                                    <p className="font-normal text-[16px] lg:text-xl text-white mb-4 relative z-50">
                                         Loading GIT Profile
                                     </p>
 
@@ -45,7 +46,7 @@ function GitCard({ props }) {
                         </div>
 
 
-                        <img src={Data.avatar_url} style={{ width: "50px", borderRadius: "100%", zIndex: 50 }} />
+                        
 
                         <Meteors number={50} />
                     </div>

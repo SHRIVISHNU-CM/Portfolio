@@ -1,4 +1,4 @@
-import Pic from "../public/SHRIVISHNU.jpeg"
+import Pic from "../public/SHRIVISHNU.webp"
 import { TypewriterEffectSmooth } from "../acenComponents/typerwriter"
 import About from "./About";
 import { Highlight } from "../acenComponents/hero-light";
@@ -20,7 +20,18 @@ function Head() {
         <>
             <main className="w-full flex justify-center flex-col lg:flex-row lg:justify-center  items-center h-screen ">
                 <div className="text-left">
-                    <img src={Pic}  className="rounded-md lg:w-[300px] w-[200px]" alt="MyImage"/>
+                    {/* <img src={Pic}  className="rounded-md lg:w-[300px] w-[200px]" alt="MyImage"/> */}
+                    <picture>
+                        <source srcSet={Pic} type="image/webp" />
+                        <img
+                            src={Pic}
+                            className="rounded-md lg:w-[300px] w-[200px]"
+                            alt="Shri Vishnu C M"
+                            loading="lazy"
+                            width={300}
+                            height={300}
+                        />
+                    </picture>
                 </div>
                 <div>
                     <h1 className="text-center text-[16px] lg:text-[20px]">Hi,Welcome Everyone</h1>
