@@ -22,7 +22,7 @@ My approach to work is driven by continuous learning, collaboration, and a focus
             <div className="flex justify-center mt-10 mb-10">
                 <main className="w-[900px] " ref={ref}>
                     {triggerEffect && 
-                    <p className=" font-serif">
+                    <p className=" p-1">
                         <TextGenerateEffect words={generate} />
                     </p>}
                 </main>
