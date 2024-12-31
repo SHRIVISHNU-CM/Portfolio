@@ -23,7 +23,7 @@ function GitCard({ props }) {
                             {
                                 props ?
                                     <h1 className="font-bold text-[16px] lg:text-xl text-white mb-4 relative z-50">
-                                        My total commits {props}
+                                        GIT Profile {props}
                                     </h1>
                                     : <h1 className="font-bold text-[16px] lg:text-xl text-white mb-4 relative z-50"> GIT Status</h1>
                             }
@@ -36,7 +36,7 @@ function GitCard({ props }) {
                                 Bio : {Data.bio}
                             </p>
                             <p className="font-normal text-[16px] lg:text-xle text-white mb-4 relative z-50">
-                                Respositeries : {Data.public_repos}
+                                Respositories : {Data.public_repos}
                             </p>
                         </div>
 
