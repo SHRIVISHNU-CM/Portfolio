@@ -34,7 +34,7 @@ function Navbar() {
 
                         <div className="relative group">
                             
-                                <TiThMenuOutline className="cursor-pointer" />
+                                <TiThMenuOutline className="cursor-pointer text-2xl" />
                                 
                             <div className="absolute right-1 top-6 hidden group-hover:block bg-white shadow-lg rounded-md py-2 z-50">
                             {
@@ -44,8 +44,7 @@ function Navbar() {
                                 )
                             })
                         }
-                                {/* <a href="#internship" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Internships</a>
-                                <a href="#projects" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Projects</a> */}
+                              
                             </div>
                         </div>
                     </div>
