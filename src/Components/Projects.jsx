@@ -12,7 +12,7 @@ function Projects() {
         {
             title: "FREELANCE Project",
             description:
-                "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
+                "Developed portfolio for my client Dr.Shrividya using tech stacks ReactJS,DaisyUI,TailwindCSS.Used custom font styles for Design.",
             
         },
         {
