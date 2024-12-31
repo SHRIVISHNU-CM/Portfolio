@@ -19,25 +19,29 @@ function GitCard({ props }) {
                     <div className="relative shadow-xl bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-around items-center">
 
                         <div>
-
+                            <h1 className="font-bold text-[16px] lg:text-xl text-white mb-4 relative z-50">
+                                GIT Profile {props}
+                            </h1>
                             {
-                                props ?
-                                    <h1 className="font-bold text-[16px] lg:text-xl text-white mb-4 relative z-50">
-                                        GIT Profile {props}
-                                    </h1>
-                                    : <h1 className="font-bold text-[16px] lg:text-xl text-white mb-4 relative z-50"> GIT Status</h1>
+                                Data ? <>
+                                    <p className="font-normal text-[16px] lg:text-xl text-white mb-4 relative z-50">
+                                        USERNAME : {Data.login}
+                                    </p>
+                                    <p className="font-normal text-[16px] lg:text-xl text-white mb-4 relative z-50">
+                                        Bio : {Data.bio}
+                                    </p>
+                                    <p className="font-normal text-[16px] lg:text-xle text-white mb-4 relative z-50">
+                                        Respositories : {Data.public_repos}
+                                    </p>
+                                </>
+                                    :
+                                    <p className="font-normal text-[16px] lg:text-xle text-white mb-4 relative z-50">
+                                        Loading GIT Profile
+                                    </p>
+
+
                             }
 
-
-                            <p className="font-normal text-[16px] lg:text-xl text-white mb-4 relative z-50">
-                                USERNAME : {Data.login}
-                            </p>
-                            <p className="font-normal text-[16px] lg:text-xl text-white mb-4 relative z-50">
-                                Bio : {Data.bio}
-                            </p>
-                            <p className="font-normal text-[16px] lg:text-xle text-white mb-4 relative z-50">
-                                Respositories : {Data.public_repos}
-                            </p>
                         </div>
 
 
