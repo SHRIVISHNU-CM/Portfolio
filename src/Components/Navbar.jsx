@@ -1,28 +1,69 @@
 import React from 'react'
 import { BsGithub } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa6";
+import { Button } from "../acenComponents/moving";
+import { TiThMenuOutline } from "react-icons/ti";
+import { Link } from 'react-router-dom';
 
 function Navbar() {
+    const navCom = [
+        {name:"Home",to:'/'},
+        {name:"Experience",to:'/experience'},
+        {name:"Projects",to:'/projects'},
+        {name:"Contact",to:'/contact'},
+
+    ]
     return (
         <>
-            <nav style={{ backgroundColor: "#003153" }} className='navbar bg-base-300  rounded-2xl w-full'>
-                
-                <div className='navbar-start'>
-                    <h1 className='font-semibold text-xl lg:text-2xl text-orange-600'>Shri Vishnu C M</h1>
-                </div>
-                <div className='navbar-center gap-x-8'>
-                    <a href="https://github.com/SHRIVISHNU-CM">
-                        <BsGithub className="text-[25px] lg:text-[35px] text-white" />
+            <div className=' flex   lg:justify-center items-center lg:rounded-2xl '>
+                <nav className=' w-full lg:w-[900px] py-2 bg-slate-50 flex justify-between sm:justify-between md:justify-between lg:justify-around items-center px-1'>
 
-                    </a>
-                    <a  href="https://www.linkedin.com/in/shrivishnu-cm-070b78274/">
-                        <FaLinkedin className="text-[25px] lg:text-[35px] text-blue-800" />
+                    <div className=''>
+                        <h1 className='text-2xl text-black font-bold'>Shri Vishnu C M</h1>
+                    </div>
+                    <div className='hidden lg:gap-8 lg:flex'>
+                        {
+                            navCom.map((ele,i)=>{
+                                return(
+                                    <Link key={i} to={ele.to}>{ele.name}</Link>
+                                )
+                            })
+                        }
+                    </div>
+                    <div className='block lg:hidden'>
 
-                    </a>
+                        <div className="relative group">
+                            
+                                <TiThMenuOutline className="cursor-pointer" />
+                                
+                            <div className="absolute right-1 top-6 hidden group-hover:block bg-white shadow-lg rounded-md py-2 z-50">
+                            {
+                            navCom.map((ele,i)=>{
+                                return(
+                                    <Link key={i} to={ele.to} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">{ele.name}</Link>
+                                )
+                            })
+                        }
+                                {/* <a href="#internship" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Internships</a>
+                                <a href="#projects" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Projects</a> */}
+                            </div>
+                        </div>
+                    </div>
+                    <div className=' gap-8 hidden lg:flex'>
+                        <a href="https://github.com/SHRIVISHNU-CM">
+                            <BsGithub className=" lg:text-[20px] text-gray-900" />
 
-                </div>
-                
-            </nav>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shrivishnu-cm-070b78274/">
+                            <FaLinkedin className="lg:text-[20px] text-blue-800" />
+
+                        </a>
+                    </div>
+
+
+                </nav>
+            </div>
+
         </>
     )
 }
