@@ -1,56 +1,95 @@
-import { motion } from "framer-motion"
 import Pic from "../public/Vishnu.jpeg"
+import { TypewriterEffectSmooth } from "../acenComponents/typerwriter"
+import About from "./About";
+import { Highlight } from "../acenComponents/hero-light";
+import Skills from "./Skills";
+import { useEffect,useState } from "react";
+import axios from "axios"
+import GitCard from "./GitCard";
+import {VITE_TOKEN} from "../../config"
+
 function Head() {
+    const words = [
+        {
+            text: "Shri Vishnu C M",
+        },
+
+    ]
+    const [contributions, setContributions] = useState([]);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchContributions = async () => {
+            const endpoint = "https://api.github.com/graphql";
+            const query = `
+                query($username: String!) {
+                    user(login: $username) {
+                        contributionsCollection {
+                            contributionCalendar {
+                                totalContributions
+                                weeks {
+                                    contributionDays {
+                                        date
+                                        contributionCount
+                                        color
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            `;
+            const token = VITE_TOKEN; 
+            try {
+                const response = await axios.post(
+                    endpoint,
+                    { query, variables: { username: "SHRIVISHNU-CM" } },
+                    {
+                        headers: {
+                            Authorization: `Bearer ${token}`,
+                        },
+                    }
+                );
+                const days =
+                    response.data.data.user.contributionsCollection.contributionCalendar.totalContributions
+                setContributions(days);
+            } catch (e) {
+                setError(e.message);
+            }
+        };
+
+        fetchContributions();
+    }, []);
     return (
         <>
-            <div className="flex justify-center  items-center lg:justify-around flex-col lg:flex-row  text-white h-[100vh]">
-                <div className="card w-96">
-                    <div className="card-body text-xl lg:text-2xl">
-                        <motion.h2
-                            initial={{ y: -30, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 0.9, delay: 0.7, }}
-                        >
-                            Hi there ,I'm
-
-                        </motion.h2>
-                        <motion.h1
-                            initial={{ y: -30, opacity: 0 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 0.9, delay: 0.2, }}
-                            className="card-title ">
-                            <span className="border-b-4 border-b-lime-500 text-[25px]">Shri Vishnu C M</span>
-                        </motion.h1>
-                        <motion.p
-                            initial={{ y: -20, opacity: 0 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 0.9, delay: 0.4, }}
-                        >A
-
-                            <span className="text-orange-500 font-semibold"> Full-Stack developer</span> passionate about moulding ideas into breathtaking digital experiences
-
-                        </motion.p>
-                        <div className="card-actions justify-end">
-                            <motion.a
-                                initial={{ y: 100, opacity: 0 }}
-                                whileInView={{ y: 0, opacity: 1 }}
-                                transition={{ duration: 0.9, delay: 0.6 }}
-                                href="https://drive.google.com/file/d/1FikbkDF9N4DpoAgVPvq6JjCpNTjVJ_vH/view?usp=sharing" className="btn btn-success text-white">Resume</motion.a>
-                        </div>
-
-
+            <main className="w-full flex justify-center flex-col lg:flex-row lg:justify-center  items-center h-screen ">
+                <div className="text-left">
+                    <img src={Pic} width={200} />
+                </div>
+                <div>
+                    <h1 className="text-center text-[16px] lg:text-[20px]">Hi,Welcome Everyone</h1>
+                    <div className=" max-w-[400px] flex items-center justify-center flex-col">
+                        <p className="text-center text-[20px] lg:text:3xl ">
+                            <TypewriterEffectSmooth words={words} />
+                        </p>
+                        <h2 className=" text-center text-[16px] lg:text-[20px]">
+                            A Full-Stack developer passionate about moulding ideas into<br />
+                            <Highlight className="text-black dark:text-white">
+                                breathtaking digital experiences
+                            </Highlight>
+                        </h2>
                     </div>
 
                 </div>
 
-                <motion.img
-                    initial={{ x: -5, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.9, delay: 1.3 }}
 
-                    src={Pic} className="w-[200px] h-[200px] rounded-lg lg:w-[400px] lg:h-[400px] lg:rounded-2xl shadow-" />
-
-            </div>
+            </main>
+            <section className="mt-10 py-10">
+                <h2 className="text-center text-[16px] lg:text-[20px] font-bold">GitHub Contributions</h2>
+            </section>
+            <GitCard props={contributions}/>
+            <About />
+            <Skills />
         </>
     )
 }
