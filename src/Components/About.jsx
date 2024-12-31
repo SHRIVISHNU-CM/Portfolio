@@ -1,34 +1,35 @@
-import { motion } from "framer-motion"
+import { useState } from "react";
+import { useInView } from "react-intersection-observer";
+import { TextGenerateEffect } from "../acenComponents/text-generate";
 
 function About() {
+    const [triggerEffect, setTriggerEffect] = useState(false);
+    const { ref, inView } = useInView({
+        triggerOnce: true, // Effect triggers only once when in view
+        threshold: 0.1,   // Percentage of the component visible to trigger
+    });
+
+    if (inView && !triggerEffect) {
+        setTriggerEffect(true);
+    }
+
+    const generate = `Proficient in React, Material UI, Express.js, Node.js, MongoDB, SQL, JavaScript, Python, Tailwind CSS, DaisyUI, HTML, and CSS with expertise in Git for version control and API development using Postman. I also excel in creating intuitive, cross-platform applications and maintaining clean, reusable code.
+
+My approach to work is driven by continuous learning, collaboration, and a focus on delivering value through technology. Let’s connect to explore opportunities and create impactful digital solutions!`;
+
     return (
         <>
-            <motion.div
-                
-                className="flex max-w-full flex-col justify-around items-center lg:flex lg:flex-row my-5">
-                <div >
-                    <motion.h1
-                        initial={{ x: -100, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 0.6 }}
-                        className="text-[25px] lg:text-2xl text-orange-500 font-semibold  my-4">About Me</motion.h1>
-                </div>
-                <div >
-                    <motion.h1
-                        initial={{ x: 100, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 0.6 }}
-                        className="text-white text-xl w-[300px] lg:text-2xl lg:w-96 h-min">
-                        I am a skilled programmer with HTML, CSS, Tailwind CSS, DaisyUI, Javascript, SQL, MongoDB, Node.js, Express.js,
-                        React.js, and Python looking for a fresher role. I possess strong leadership qualities and thrive in collaborative team
-                        environments. With a passion for technology and attention to detail, I deliver high-quality results. I am committed to
-                        continuous learning and eager to contribute to a dynamic organization.
-                    </motion.h1>
-                </div>
-            </motion.div>
+            <div className="flex justify-center mt-10 mb-10">
+                <main className="w-[900px] " ref={ref}>
+                    {triggerEffect && 
+                    <p className=" font-serif">
+                        <TextGenerateEffect words={generate} />
+                    </p>}
+                </main>
+            </div>
 
         </>
-    )
+    );
 }
 
-export default About
+export default About;
