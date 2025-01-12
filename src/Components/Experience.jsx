@@ -6,14 +6,18 @@ function Experience() {
       title: "Nov/2024 - Present",
       content: (
         <div className='lg:w-[600px]'>
-          <h1 className='font-bold text text-[16px] lg:text-[20px]'>SHEINODE INFOTECH - Web Development Internship</h1>
+          <h1 className='font-bold text text-[16px] lg:text-[20px]'>SHEINODE INFOTECH - Full Stack Developer Intern</h1>
           <p className="text-neutral-800 dark:text-neutral-200 text-[16px] lg:text-[20px] font-normal mb-8">
             Collaborated closely with the founder to design and develop a responsive, visually appealing website aligned with the company's business objectives.
 
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-[16px] lg:text-[20px] font-normal mb-8">
-            Utilized Aceternity UI alongside modern frameworks like React, Material UI, GSAP, and Framer Motion to deliver a rich, dynamic, and engaging user experience.
+          Improved website performance, achieving an 18% increase in overall efficiency using optimization techniques.
 
+          </p>
+          <p className="text-neutral-800 dark:text-neutral-200 text-[16px] lg:text-[20px] font-normal mb-8">
+            Utilized Aceternity UI alongside modern frameworks like React, Material UI, GSAP, and Framer Motion to deliver a rich, dynamic, and engaging user experience.
+            
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-[16px] lg:text-[20px] font-normal mb-8">
             Designed and developed key sections such as About, Services, and Contact pages, adhering to best practices with clean, reusable, and optimized code.
