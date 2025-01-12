@@ -46,7 +46,7 @@ function Head() {
                             </Highlight>
                         </h2>
                         <div className="mt-6 flex justify-center gap-3">
-                            <Link to={VITE_RESUME} className="border px-10 py-3 rounded-3xl  bg-emerald-500 hover:bg-emerald-300 text-white">
+                            <Link to={"https://drive.google.com/file/d/1jATf4MAGirgt1p0AHzXQYr_onCDSDUAc/view?usp=sharing"} className="border px-10 py-3 rounded-3xl  bg-emerald-500 hover:bg-emerald-300 text-white">
                                 Resume
                             </Link>
                             <Link to="/experience" className="border px-10 py-3 rounded-3xl  bg-emerald-500 hover:bg-emerald-300 text-white">
