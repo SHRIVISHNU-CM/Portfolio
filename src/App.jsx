@@ -1,14 +1,20 @@
 
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Footer from "./Components/Footer"
-import Head from "./Components/Head"
 import NavBar from "./Components/Navbar"
-import { motion, useScroll } from "framer-motion"
+import { pageview } from "./gtag";
+import { useEffect } from "react";
 
 
 
 function App() {
-  const { scrollYProgress } = useScroll();
+  const location = useLocation()
+
+  useEffect(()=>{
+    pageview(location.pathname)
+
+  },[location])
+
   return (
     <>
       <div className="h-full w-full dark:bg-black bg-white dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2]">
