@@ -3,7 +3,35 @@ import { Timeline } from "../acenComponents/timeline";
 function Experience() {
   const data = [
     {
-      title: "Nov/2024 - Present",
+      title: "Mar/2024 - Present",
+      content: (
+        <div className='lg:w-[600px]'>
+          <h1 className='font-bold text text-[16px] lg:text-[20px]'>Unimad.ai - Full Stack Developer Intern</h1>
+          <p className="text-neutral-800 dark:text-neutral-200 text-[16px] lg:text-[20px] font-normal mb-8">
+            Collaborated directly with the CTO at Unimad.ai to revamp the UniBot, improving its performance, UX, and overall functionality.
+
+          </p>
+          <p className="text-neutral-800 dark:text-neutral-200 text-[16px] lg:text-[20px] font-normal mb-8">
+          Designed and implemented a new application tracker with drag-and-drop functionality and real-time status updates, enhancing user interaction and efficiency.
+
+          </p>
+          <p className="text-neutral-800 dark:text-neutral-200 text-[16px] lg:text-[20px] font-normal mb-8">
+           Identified and resolved critical bugs in production, significantly improving application stability and user experience.
+            
+          </p>
+          <p className="text-neutral-800 dark:text-neutral-200 text-[16px] lg:text-[20px] font-normal mb-8">
+            Contributed as part of a collaborative team to expand the resume builder feature, adding multiple modern templates for diverse user preferences.
+
+          </p>
+          <p className="text-neutral-800 dark:text-neutral-200 text-[16px] lg:text-[20px] font-normal mb-8">
+           Optimized component performance using React hooks like useMemo and useCallback, leading to smoother UI interactions and reduced re-renders.
+
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Nov/2024 - Mar/2025",
       content: (
         <div className='lg:w-[600px]'>
           <h1 className='font-bold text text-[16px] lg:text-[20px]'>SHEINODE INFOTECH - Full Stack Developer Intern</h1>

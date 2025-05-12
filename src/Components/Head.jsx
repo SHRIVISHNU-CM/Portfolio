@@ -46,11 +46,12 @@ function Head() {
                             </Highlight>
                         </h2>
                         <div className="mt-6 flex justify-center gap-3">
-                            <Link to={"https://drive.google.com/file/d/1-31Qsr2DfYOwaLZL7W5QTOsHScNlGyWc/view?usp=sharing"} className="border px-10 py-3 rounded-3xl  bg-emerald-500 hover:bg-emerald-300 text-white">
+
+                            <a target="_blank" href={"https://drive.google.com/file/d/1Sf2L6yNuaTbZrGif3XRLE-Q4eEgsW9Lv/view?usp=sharing"} className="border px-10 py-3 rounded-3xl  bg-emerald-500 hover:bg-emerald-300 text-white">
                                 Resume
-                            </Link>
+                            </a>
                             <Link to="/experience" className="border px-10 py-3 rounded-3xl  bg-emerald-500 hover:bg-emerald-300 text-white">
-                               My Experience
+                                My Experience
                             </Link>
                         </div>
 
