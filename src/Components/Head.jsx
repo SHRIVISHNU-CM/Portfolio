@@ -47,7 +47,7 @@ function Head() {
                         </h2>
                         <div className="mt-6 flex justify-center gap-3">
 
-                            <a target="_blank" href={"https://drive.google.com/file/d/1Aoz5hxoUKbLYUcxFQlReo1vPQboYoc-O/view?usp=sharing"} className="border px-10 py-3 rounded-3xl  bg-emerald-500 hover:bg-emerald-300 text-white">
+                            <a target="_blank" href={"https://drive.google.com/file/d/1K9jg5rOZ337UiUxmOdb7uhX_YXTwGq56/view?usp=sharing"} className="border px-10 py-3 rounded-3xl  bg-emerald-500 hover:bg-emerald-300 text-white">
                                 Resume
                             </a>
                             <Link to="/experience" className="border px-10 py-3 rounded-3xl  bg-emerald-500 hover:bg-emerald-300 text-white">
